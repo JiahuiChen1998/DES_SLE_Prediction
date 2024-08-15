@@ -1,0 +1,40 @@
+batch_size: 128
+epochs: 100
+fine_tune_from: None
+gpu: cuda:0
+vocab_path: 'vocab.txt'
+num_workers: 2
+init_base_lr: 0.001
+init_lr: 0.001
+lr_decay_factor : 0.3
+min_lr :  0.0003
+weight_decay : 0       
+model_type: gnn                 
+seed :  1                                  
+k : 10
+norm : True
+DA : True
+
+lr_decay_patience : 7
+early_stop_patience : 20
+
+gnn:
+  in_channels : 40
+  hidden_channels : 256
+  out_channels : 1
+  num_layers : 4
+  edge_dim : 10
+  num_timesteps : 2
+  dropout : 0.05
+
+
+transformer:
+  ntoken: 73
+  d_model: 256
+  nhead: 8
+  d_hid: 128
+  nlayers: 4
+  dropout: 0.05
+
+
+
